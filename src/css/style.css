@@ -134,7 +134,7 @@ body{
   background-color: #FFF;
   border-radius: 3.125rem;
   border: 0;
-  box-shadow: rgba(100, 100, 111, .2) 0rem .4375rem 1.8125rem 0rem;
+  box-shadow: rgba(131, 81, 254, .671) 0rem 0rem 1.25rem .125rem;
 
   cursor: pointer;
 
@@ -151,6 +151,13 @@ body{
     transform: rotateY(180deg);
   }
   &:hover{
-    background-color: #8351FE;
+    background-color: #8351fE;
+  }
+  &:focus{
+    outline: none;
+    box-shadow: rgba(131, 81, 254, .8) 0rem 0rem .8rem .5rem;
+  }
+  &:active{
+    filter: brightness(1.4);
   }
 }
