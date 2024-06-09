@@ -42,6 +42,8 @@ body{
   position: relative;
 
   &>.card {
+    max-width: 20.625rem;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,6 +94,10 @@ body{
       max-height: 17.5rem;
     }
     &>.name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
       background-color: rgba(179, 177, 185, .7);
       border-top-left-radius: .625rem;
       border-top-right-radius: .625rem;
@@ -122,7 +128,7 @@ body{
 
         padding: .75rem;
 
-        max-height: 5.5rem;
+        max-height: 7.5rem;
 
         overflow-y: auto;
       }
