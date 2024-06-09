@@ -12,20 +12,37 @@ function selectCard(currentCard){
   cards[currentCard].classList.add("selected");
 }
 
-nextBtn.addEventListener("click", () => {
+function nextCard(){
   if(currentCard === cards.length - 1){
     currentCard = -1;
   }
 
   removeSelection();
   selectCard(++currentCard); // currentCard += 1
-});
+}
 
-prevBtn.addEventListener("click", () => {
+function previousCard(){
   if(currentCard === 0){
     currentCard = cards.length;
   }
 
   removeSelection();
   selectCard(--currentCard); // currentCard -= 1
+}
+
+nextBtn.addEventListener("click", () => {
+  nextCard();
+});
+
+prevBtn.addEventListener("click", () => {
+  previousCard();
+});
+
+document.addEventListener("keyup", event => {
+  if(event.key === "ArrowRight"){
+    nextCard();
+  
+  } else if(event.key === "ArrowLeft"){
+    previousCard();
+  }
 });
